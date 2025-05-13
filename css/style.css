@@ -1,0 +1,817 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #E6DBCD;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: calc(100vw - 17px);
+    margin: 0;
+}
+
+/* FONTS */
+@font-face {
+    font-family: Header;
+    src: url(/font/georgiab.ttf);
+}
+
+@font-face {
+    font-family: SubHeader;
+    src: url(/font/Montserrat-Medium.otf);
+}
+
+@font-face {
+    font-family: Body;
+    src: url(/font/Montserrat-Regular.otf);
+}
+
+h1 {
+    font-family: Header;
+    font-size: 2.5vw;
+}
+
+p {
+    font-family: Body;
+    font-size: 1vw;
+    line-height: 1.5;
+}
+
+a {
+    font-family: SubHeader;
+    font-size: 1vw;
+    line-height: 1.5;
+}
+
+
+/* HEADER */
+.header {
+    background-color: #472919;
+    background-image: url("../img/headerRight.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto 100%;
+    height: 85vh;
+    width: calc(98vw - 17px);
+    margin: 1vw;
+    border-radius: 3vw;
+}
+
+.navigation {
+    height: 5vh;
+    width: 96w;
+    font-size: 1vw;
+    font-family: Body;
+    padding: 3vw;
+}
+
+.navigation a {
+    margin: 0 2.2vw;
+    color: #E6DBCD;
+    cursor: pointer;
+    font-size: 1vw;
+}
+
+.title {
+    height: 70vh;
+    width: 52vw;
+    color: #E6DBCD;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.title img {
+    padding: 0 15vw;
+}
+
+.title p {
+    padding: 1vw 8vw;
+}
+
+.title a {
+    background-color: #CA9019;
+    color: #EEE7DE;
+    border-radius: 50px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 13vw;
+    padding: 2vh 2vw;
+    margin: 2vw;
+    font-size: 1vw;
+    cursor: pointer;
+    font-family: SubHeader;
+}
+
+/* TENTANG BATIK KAWUNG */
+.batikKawung {
+    height: 100vh;
+    width: 100vw;
+    background-color: #E6DBCD;
+    background-image: url("../img/batikKawungBackground.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    margin: 4vh 0;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.backgroundAboutBatik {
+    height: 70vh;
+    width: 80vw;
+    margin: 0 10vw;
+    background-image: url("../img/backgroundAboutBatik.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 2vw;
+    box-shadow: 0px 0px 2vw rgba(54, 43, 43, 0.4);
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.aboutBatik {
+    width: 50vw;
+    height: auto;
+    padding: 3vw 5vw;
+    margin: 0 15vw;
+    background-color: #472919;
+    box-shadow: 0px 0px 2vw rgba(54, 43, 43, 0.4);
+    border-radius: 1.5vw;
+}
+
+.aboutBatik p,.aboutBatik h1 {
+    color: #E6DBCD;
+    padding: 1vw 0;
+}
+
+
+/* GENERATIVE BATIK */
+.backgroundGenerativeBatik {
+    width: calc(85vw - 17px);
+    height: auto;
+    margin: 0 7.5vw;
+    background-color: #472919;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    box-shadow: 0px 0px 12px rgba(54, 43, 43, 0.5);
+    border-radius: 2vw;
+}
+
+.generativeBatik {
+    width: calc(80vw - 17px);
+    height: auto;
+    margin: 2.5vw;
+    background-color: #E6DBCD;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border-radius: 1vw;
+    color: #472919;
+}
+
+.generativeBatik h1 {
+    margin: 3vw 0 1vw 0;
+
+}
+
+.canvas-container {
+    width: calc(80vw - 17px);
+    display: flex;
+    align-items: flex-start; 
+    margin: 5vh 0;
+}
+
+#generativeBatik {
+    position: relative;
+    width: calc(40vw - 17px);
+    padding-left: 5vw;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    float: left;
+}
+
+.button-container {
+    width: calc(40vw - 17px);
+    padding-right: 3vw;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    float: left;
+    margin-top: 1vw;
+}
+
+.button-container button {
+    background-color: #CA9019;
+    color: #EEE7DE;
+    border-radius: 50px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    float: left;
+    width: 13vw;
+    padding: 2vh 2vw;
+    margin: 2vh 2vw 2vh 2vw;
+    font-size: 1vw;
+    cursor: pointer;
+    font-family: SubHeader;
+}
+
+.button-container button:hover {
+    background-color: #472919;
+}
+
+.button-container button:nth-child(8) {
+    background-color: #8B2B2B;
+}
+
+.button-container button:nth-child(8):hover {
+    background-color: #470c0c;
+}
+
+.button-container button:nth-child(9) {
+    margin-top: 5vh;
+    background-color: #577947;
+}
+
+.button-container button:nth-child(9):hover {
+    background-color: #2A3D21;
+}
+
+
+
+/* FEATURED WORK */
+.batikWork {
+    width: calc(90vw - 17px);
+    height: auto;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 5vw;
+}
+
+
+
+
+/* FOOTER */
+.footer {
+    border-radius: 3vw;;
+    background-color: #472919;
+    color: #E6DBCD;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: calc(96vw - 17px);
+    height: auto;
+    margin: 2vw 2vw 0 2vw;
+    border-radius: 2vw 2vw 0 0;
+    
+}
+
+.tentangGBatik {
+    height: auto;
+    padding: 3vw;
+}
+
+.tentangGBatik p {
+    padding: 2vw 16vw 0 16vw;
+}
+
+.copyright {
+    margin: 0.5vw;
+}
+
+@media (max-width:1024px) {
+    h1 {
+        font-family: Header;
+        font-size: 5vw;
+    }
+    
+    p {
+        font-family: Body;
+        font-size: 3vw;
+        line-height: 1.5;
+    }
+    
+    a {
+        font-family: SubHeader;
+        font-size: 4vw;
+        line-height: 1.5;
+    }
+    
+    
+    /* HEADER */
+    .header {
+        background-image: url("../img/headerMobileBottom.png");
+        background-position: bottom;
+        background-size: 100% auto;
+        height: 85vh;
+        width: 94vw;
+        margin: 3vw;
+        border-radius: 3vw;
+    }
+    
+    .navigation {
+        height: auto;
+        width: 94vw;
+        font-size: 3vw;
+        font-family: subHeader;
+        padding: 6vw 3vw;
+    }
+    
+    .navigation a {
+        margin: 0 3.7vw;
+        color: #E6DBCD;
+        cursor: pointer;
+        font-size: 3vw;
+    }
+    
+    .title {
+        height: 70vh;
+        width: 94vw;
+        padding-top: 0vh;
+    }
+    
+    .title img {
+        padding: 0 15vw;
+    }
+    
+    .title p {
+        padding: 4vw 10vw;
+    }
+    
+    .title a {
+        background-color: #CA9019;
+        color: #EEE7DE;
+        width: 18vw;
+        padding: 1.5vh 5vw;
+        margin: 2vw;
+        font-size: 3vw;
+        cursor: pointer;
+        font-family: SubHeader;
+    }
+    
+    /* TENTANG BATIK KAWUNG */
+    .batikKawung {
+        height: 70vh;
+        width: 100vw;
+        background-color: #E6DBCD;
+        background-image: url("../img/backgroundMobile.png");
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        margin: 5vh 0;
+    }
+    .backgroundAboutBatik {
+        height: 55vh;
+        width: 85vw;
+        margin: 0 7.5vw;
+        background-image: url("../img/backgroundAboutBatikMobile.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .aboutBatik {
+        width: 70vw;
+        height: auto;
+        padding: 3vw 5vw;
+        margin: 0 7.5vw;
+    }
+
+    .aboutBatik h1 {
+        color: #E6DBCD;
+        padding: 1.5vh 0 0 0;
+    }
+
+    .aboutBatik p {
+        padding: 2vh 3vw;
+    }
+
+    /* GENERATIVE BATIK */
+    .backgroundGenerativeBatik {
+        width: 92vw;
+        height: auto;
+        margin: 0 4vw;
+        background-color: #472919;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        box-shadow: 0px 0px 12px rgba(54, 43, 43, 0.5);
+        border-radius: 2vw;
+    }
+
+    .generativeBatik {
+        width: 86vw;
+        height: auto;
+        margin: 3vw;
+        background-color: #E6DBCD;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        border-radius: 1vw;
+        color: #472919;
+    }
+
+    .generativeBatik h1 {
+        margin: 3vh 0 1vw 0;
+    }
+
+    .generativeBatik p {
+        padding: 1vh 8vw;
+    }
+
+    .canvas-container {
+        width: 86vw;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        position: relative;
+        flex-direction: column;
+        float: left;
+        margin: 2vh 0;
+    }
+
+    #generativeBatik {
+        position: relative;
+        width: 86vw;
+        padding-left: 0vw;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        float: left;
+    }
+
+    .button-container {
+        width: 86vw;
+        padding-right: 0vw;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        display: flex;
+        position: relative;
+        float: left;
+        margin-top: 1vw;
+        
+    }
+
+    .button-container button {
+        background-color: #CA9019;
+        color: #EEE7DE;
+        border-radius: 50px;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        float: left;
+        width: 35vw;
+        padding: 1.5vh 2vw;
+        margin: 2vh 2vw 0vh 2vw;
+        font-size: 3vw;
+        cursor: pointer;
+        font-family: SubHeader;
+    }
+
+    .button-container button:hover {
+        background-color: #472919;
+    }
+
+    .button-container button:nth-child(8) {
+        background-color: #8B2B2B;
+    }
+
+    .button-container button:nth-child(8):hover {
+        background-color: #470c0c;
+    }
+
+    .button-container button:nth-child(9) {
+        margin-top: 3vh;
+        background-color: #577947;
+    }
+
+    .button-container button:nth-child(9):hover {
+        background-color: #2A3D21;
+    }
+
+
+    /* FOOTER */
+    .footer {
+        border-radius: 3vw;;
+        background-color: #472919;
+        color: #E6DBCD;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        width: 96vw;
+        height: auto;
+        margin: 2vw 2vw 0 2vw;
+        border-radius: 2vw 2vw 0 0;
+    }
+
+    .tentangGBatik {
+        height: auto;
+        margin: 3vh 0;
+        padding: 3vw;
+    }
+
+    .tentangGBatik p {
+        margin: 2vh 0;
+        padding: 2vw 3vw 0 3vw;
+    }
+
+    .copyright {
+        margin: 0.5vw;
+    }
+}
+
+@media (max-width:600px) {
+    h1 {
+        font-family: Header;
+        font-size: 5vw;
+    }
+    
+    p {
+        font-family: Body;
+        font-size: 3vw;
+        line-height: 1.5;
+    }
+    
+    a {
+        font-family: SubHeader;
+        font-size: 4vw;
+        line-height: 1.5;
+    }
+    
+    
+    /* HEADER */
+    .header {
+        background-image: url("../img/headerMobileBottom.png");
+        background-position: bottom;
+        background-size: 100% auto;
+        height: 85vh;
+        width: 94vw;
+        margin: 3vw;
+        border-radius: 3vw;
+    }
+    
+    .navigation {
+        height: auto;
+        width: 94vw;
+        font-size: 3vw;
+        font-family: subHeader;
+        padding: 6vw 3vw;
+    }
+    
+    .navigation a {
+        margin: 0 3.7vw;
+        color: #E6DBCD;
+        cursor: pointer;
+        font-size: 3vw;
+    }
+    
+    .title {
+        height: 70vh;
+        width: 94vw;
+        padding-top: 0vh;
+    }
+    
+    .title img {
+        padding: 0 15vw;
+    }
+    
+    .title p {
+        padding: 4vw 10vw;
+    }
+    
+    .title a {
+        background-color: #CA9019;
+        color: #EEE7DE;
+        width: 18vw;
+        padding: 1.5vh 5vw;
+        margin: 2vw;
+        font-size: 3vw;
+        cursor: pointer;
+        font-family: SubHeader;
+    }
+    
+    /* TENTANG BATIK KAWUNG */
+    .batikKawung {
+        height: 70vh;
+        width: 100vw;
+        background-color: #E6DBCD;
+        background-image: url("../img/backgroundMobile.png");
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        margin: 5vh 0;
+    }
+    .backgroundAboutBatik {
+        height: 55vh;
+        width: 85vw;
+        margin: 0 7.5vw;
+        background-image: url("../img/backgroundAboutBatikMobile.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .aboutBatik {
+        width: 70vw;
+        height: auto;
+        padding: 3vw 5vw;
+        margin: 0 7.5vw;
+    }
+
+    .aboutBatik h1 {
+        color: #E6DBCD;
+        padding: 1.5vh 0 0 0;
+    }
+
+    .aboutBatik p {
+        padding: 2vh 3vw;
+    }
+
+    /* GENERATIVE BATIK */
+    .backgroundGenerativeBatik {
+        width: 92vw;
+        height: auto;
+        margin: 0 4vw;
+        background-color: #472919;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        box-shadow: 0px 0px 12px rgba(54, 43, 43, 0.5);
+        border-radius: 2vw;
+    }
+
+    .generativeBatik {
+        width: 86vw;
+        height: auto;
+        margin: 3vw;
+        background-color: #E6DBCD;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        border-radius: 1vw;
+        color: #472919;
+    }
+
+    .generativeBatik h1 {
+        margin: 3vh 0 1vw 0;
+    }
+
+    .generativeBatik p {
+        padding: 1vh 8vw;
+    }
+
+    .canvas-container {
+        width: 86vw;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        position: relative;
+        flex-direction: column;
+        float: left;
+        margin: 2vh 0;
+    }
+
+    #generativeBatik {
+        position: relative;
+        width: 86vw;
+        padding-left: 0vw;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        float: left;
+    }
+
+    .button-container {
+        width: 86vw;
+        padding-right: 0vw;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        display: flex;
+        position: relative;
+        float: left;
+        margin-top: 1vw;
+        
+    }
+
+    .button-container button {
+        background-color: #CA9019;
+        color: #EEE7DE;
+        border-radius: 50px;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        float: left;
+        width: 35vw;
+        padding: 1.5vh 2vw;
+        margin: 2vh 2vw 0vh 2vw;
+        font-size: 3vw;
+        cursor: pointer;
+        font-family: SubHeader;
+    }
+
+    .button-container button:hover {
+        background-color: #472919;
+    }
+
+    .button-container button:nth-child(8) {
+        background-color: #8B2B2B;
+    }
+
+    .button-container button:nth-child(8):hover {
+        background-color: #470c0c;
+    }
+
+    .button-container button:nth-child(9) {
+        margin-top: 3vh;
+        background-color: #577947;
+    }
+
+    .button-container button:nth-child(9):hover {
+        background-color: #2A3D21;
+    }
+
+
+    /* FOOTER */
+    .footer {
+        border-radius: 3vw;;
+        background-color: #472919;
+        color: #E6DBCD;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        width: 96vw;
+        height: auto;
+        margin: 2vw 2vw 0 2vw;
+        border-radius: 2vw 2vw 0 0;
+    }
+
+    .tentangGBatik {
+        height: auto;
+        margin: 3vh 0;
+        padding: 3vw;
+    }
+
+    .tentangGBatik p {
+        margin: 2vh 0;
+        padding: 2vw 3vw 0 3vw;
+    }
+
+    .copyright {
+        margin: 0.5vw;
+    }
+}
