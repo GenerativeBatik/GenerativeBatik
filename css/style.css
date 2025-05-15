@@ -14,17 +14,17 @@ body {
 /* FONTS */
 @font-face {
     font-family: Header;
-    src: url(/font/georgiab.ttf);
+    src: url('../font/georgiab.ttf');
 }
 
 @font-face {
     font-family: SubHeader;
-    src: url(/font/Montserrat-Medium.otf);
+    src: url('../font/Montserrat-Medium.otf');
 }
 
 @font-face {
     font-family: Body;
-    src: url(/font/Montserrat-Regular.otf);
+    src: url('../font/Montserrat-Regular.otf');
 }
 
 h1 {
