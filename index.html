@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBatik</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script defer src="/js/generate.js"></script>
+</head>
+
+<body>
+        <div class="header">
+            <div class="navigation">
+                <a href="#tentangBatik">Batik Kawung</a>
+                <a href="#generate">Generatif</a>
+                <a href="#works">Karya</a>
+                <a href="#GBatik">G.Batik</a>
+            </div>
+
+            <div class="title">
+                <img src="/img/LOGO.png">
+                <p>Eksplorasi bagaimana motif Batik tradisional dapat digabungkan dengan tren kontemporer.</p>
+                <p style="margin-bottom: 0.3vw;">Buat Batik Mu Sekarang!</p>
+                <a href="#generate">Generatif Batik</a>
+            </div>
+        </div>
+
+    <div class="batikKawung" id="tentangBatik">
+        <div class="backgroundAboutBatik">
+            <div class="aboutBatik">
+                <h1>
+                    Tentang Batik Kawung
+                </h1>
+                <p style="border-bottom: solid 2px #E6DBCD;">
+                    Batik Kawung dikenal sebagai lambang kemurnian dan kesucian.
+                </p>
+                <p>
+                    Batik Kawung mendorong pemakainya, khususnya generasi muda untuk bertindak sesuai dengan kebenaran dan bertindak jujur dan sesuai dengan etiket hingga mereka dewasa.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="backgroundGenerativeBatik" id="generate">
+        <div class="generativeBatik" id="generateSection">
+            <h1>Buat Batik Anda sekarang!</h1>
+            <p>Tekan tombol untuk menghasilkan motif yang berbeda. Setelah kamu selesai, pencet tombol SIMPAN.</p>
+            <div class="canvas-container">
+                <div id="generativeBatik"></div>
+                <div class="button-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="batikWork" id="works">
+        <h1>Visualisasi Mockup hasil Karya</h1>
+        <div class="catalogue">
+            
+        </div>
+    </div>
+
+    <div class="footer" id="GBatik">
+        <div class="tentangGBatik">
+            <p>Di jaman ini, banyak generasi muda berasumsi bahwa Batik hanya digunakan pada acara formal yang membuat mereka jarang menerapkan Batik dalam kesehariannya.</p>
+            <img src="/img/LOGO.png">
+            <h1>Tentang G.Batik</h1>
+            
+            <p>G.Batik bertujuan untuk menunjukkan bahwa seni generatif dapat menjadi jembatan antara Batik Solo dan tren kontemporer, mendorong generasi muda untuk memastikan warisan budaya tetap relevan dan meningkatkan motivasi untuk menggunakan Batik pada acara kasual atau kesehariannya.</p>
+        </div>
+        <div class="copyright">
+            <p>© 2025 G.Batik All rights reserved.</p>
+        </div>
+    </div>
+
+    <a href="#" class="scrollTop">Awal</a>
+
+    <script>
+        const scrollTop = document.querySelector(".scrollTop");
+
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                scrollTop.classList.add("active");
+            } else {
+                scrollTop.classList.remove("active");
+            }
+            }
+        )
+    </script>
+</body>
+</html>
